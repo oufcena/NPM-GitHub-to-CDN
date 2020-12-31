@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<style>
+.y { background: yellow;    }
+.o { background: orange;    }
+.p { background: pink;      }
+.g { background: green;     }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oufcena/Calculator/style.css">
+<body>
+
+<img style="width:100%;" src="https://res.cloudinary.com/practicaldev/image/fetch/s---W8rVjtZ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/4pz7xy11brx1ry3jlmtg.png">
+
+<h2>NPM & GitHub to CDN</h2>
+
+<h5>
+  https://cdn.jsdelivr.net/npm/package-name
+</h5>
+
+<h5>
+  https://
+  <c class="y">DNS</c> /
+  <c class="o">username</c> /
+  <c class="p">repo</c> /
+  <c class="g">file</c>
+</h5>
+
+<h5>
+  https://
+  <c class="y">raw.githubusercontent.com</c> /
+  <c class="o">hanakivan</c> /
+  <c class="p">mce-css-style</c> /
+  <c class="g">01-vars.css</c>
+</h5>
+
+<h5>
+  https://
+  <c class="y">cdn.jsdelivr.net/gh</c> /
+  <c class="o">hanakivan</c> /
+  <c class="p">mce-css-style</c> /
+  <c class="g">01-vars.css</c>
+</h5>
+
+<script src="https://cdn.jsdelivr.net/gh/oufcena/Calculator/script.js"></script>
+
+<script>
+function CDN(link) {
+  if(!link) {
+    link = 'https://cdn.jsdelivr.net/gh/oufcena/Calculator/index.html';
+  }
+  var data = async() => {
+    var result = await fetch(link).then(
+      response => response.text()
+    );
+    document.body.innerHTML += result;
+  }; data();
+} CDN();
+</script>
+
+</body>
+</html>
